@@ -1,0 +1,479 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    /* chrome - safari */
+    -webkit-box-sizing: border-box;
+    /* firefox */
+    -moz-box-sizing: border-box;
+    /* microsoft */
+    -ms-box-sizing: border-box;
+    /* opera */
+    -o-box-sizing: border-box;
+    box-sizing:  border-box;
+}
+html {
+    font-size: 62.5%;
+    /* 10px = 1rem */
+}
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor : pointer;
+}
+
+input, textarea, button {
+    outline: none;
+    box-shadow: none;
+    font-family: 'Lato', sans-serif;
+
+}
+/* bien dung chung */
+:root {
+    --primary-color : #64c29e;
+    --heading-color : #4d4959;
+    --text-color : #848789;
+    --bg-light : #f7f7f7;
+    --bg-white : #ffffff;
+    --bg-dark : #282f35;
+}
+
+/* html css */
+/* css header */
+.wrapper {
+    max-width: 1600px;
+    margin : 0 auto;
+}
+
+.header {
+    height: 800px;
+    background-image: url(images/YEBO_Bicycle_Theme.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: flex-start;
+    /* truc x */
+    justify-content: center;
+}
+
+.nav {
+    margin-top: 35px;
+}
+
+.nav__list {
+    display: flex;
+    /* truc y */
+    align-items: center; 
+}
+
+.nav__item {
+    padding-left: 40px;
+    padding-right : 40px;
+    position: relative;
+}
+
+.nav__item:first-child::after,
+.nav__item:nth-child(4)::after {
+    content: ".";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+}
+
+.nav__link {
+    position: relative;
+    display: block;
+    /* viet hoa */
+    text-transform: uppercase;
+    color : var(--heading-color);
+    font-weight : 700;
+    font-size :13px;
+
+}
+
+/* ./ css header */
+
+/* css feature */
+
+.feature__header {
+    background-color: var(--bg-light);
+    text-align: center;
+    padding: 11rem 1.5rem 14rem;
+}
+.feature__img__top {
+    margin: 0 auto 3.5rem;
+}
+.feature__heading {
+    font-size: 1.8rem;
+    line-height:1.6;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.5rem;
+}
+.feature__desc {
+    font-size: 1.8rem;
+    line-height:1.6;
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 108.8rem;
+}
+/* css feature list */
+.feature__item {
+    display: flex;
+    flex-flow: row wrap;
+    height: 60rem;
+    /* ko cho xuat hien thanh scroll */
+    overflow: hidden;
+}
+.feature__item-img {
+    width: 67%;
+    position: relative;
+}
+.feature__item-content {
+    width: 33%;
+}
+.feature__item .img_bg {
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+.feature__item .img__brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+.feature__item-content {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.feature__item-content-top {
+    background-color:  var(--bg-white);
+    padding: 0 7rem;
+    height: 67%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.feature__item-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    text-align: justify;
+    position: relative;
+    padding-bottom: 4rem;
+}
+.feature__item-content-bottom {
+    height: 33%;
+}
+
+/* doi vi tri hien thi  */
+.feature__item:nth-child(2) .feature__item-img {
+    order: 2;
+}
+
+.feature__item:last-child > .feature__item-img {
+    width : 33%;
+}
+
+.feature__item:last-child > .feature__item-content {
+    width : 34%;
+}
+
+/* css boder bottom */
+
+.feature__item-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width : 5.3rem;
+    height: 2px;
+    background-color: #d7d7d7;
+}
+
+.feature__item-content-top::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--bg-white);
+    z-index: 10;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+/* twitter */
+.twitter {
+    background-color: var(--bg-light);
+    padding : 12.5rem 1.5rem 6.8rem;
+    text-align: center;
+}
+
+.twitter__icon {
+    color: #56c7ee;
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.twitter__heading {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+
+}
+
+.twitter__location , .twitter__author {
+    color : var(--header-color);
+    font-weight: bold;
+    letter-spacing:0.5rem;
+}
+
+.twitter__time {
+    color : var(--text-color);
+    font-weight: 300;
+    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.twitter__time::before {
+    content: "/";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.twitter__content {
+    font-size: 2.4rem;
+    color : var(--text-color);
+    font-style: italic;
+    margin: 0 auto 10rem;
+    max-width : 104.5rem;
+    line-height : 1.8;
+}
+
+.twitter__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitter__pagination-item {
+    width :1.5rem;
+    height :1.5rem;
+    border-radius : 50%;
+    border: 1px solid var(--text-color);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.twitter__pagination-item.is_active {
+    background-color: var(--text-color);
+}
+
+/* css banner */
+.banner__list{
+    width: 100%;
+    display: flex;
+    margin: 0;
+}
+.banner__item{
+    width: 50%;
+    display: flex;
+}
+.banner__item--left-top{
+    width: 100%;
+    display: flex;
+}
+.banner__item--left{
+    width: 66.6%;
+}
+.banner__item--left-top{
+    width: 100%;
+}
+.banner__img--top{
+    width: 50%;
+}
+.banner__item--right{
+    width: 33.4%;
+}
+.banner__item--left-bottom{
+    width: 100%;
+}
+.banner__img--bottom{
+    width: 100%;
+}
+.banner__img{
+    width: 100%;
+}
+/* đổi vị ảnh */
+.banner__item:nth-child(2) .banner__item--left{
+    order: 2;
+}
+
+.banner__item:nth-child(2) .banner__item--left-bottom{
+    position: relative;
+}
+.banner__position{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 100;
+}
+.logo__ig{
+    width: 4.5rem;
+    height: 3.5rem;
+    margin-bottom: 0.75rem;
+}
+.banner__text{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.3rem;
+}
+.img__bg--bottom{
+    position:absolute;
+    background-color: #58a589;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 80%;
+}
+.discover{
+    width: 100%;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+}
+.discover__buttom{
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+    width: 30rem;
+    height: 5rem;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--text-color);
+}
+.discover__text{
+    font-weight: 400,700;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+/* css saddle */
+.saddle{
+    width: 100%;
+    background-color: var(--bg-white);
+    text-align: center;
+    padding-top: 10.9rem;
+    padding-bottom: 11rem;
+}
+.saddle__text{
+    font-weight: 300;
+    line-height: 2;
+    font-size: 2.4rem;
+    margin-top: 4rem;
+}
+.saddle__inputgo{
+    margin-top:4rem;
+    display: inline-flex;
+}
+.saddle__input{
+    width: 40rem;
+    height: 7rem;
+    color: var(--text-color);
+    padding: 3rem 2.5rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+}
+.saddle__bottom{
+    width: 12.5rem;
+    height: 7rem;
+    background-color: #64c29e;
+    margin-left: 1rem;
+}
+.go{
+    font-weight: 300;
+    font-size: 2.4rem;
+    color: #ffffff;
+}
+.footer{
+    width: 100%;
+    background-color: var(--bg-light);
+    display: flex;
+    color: var(--text-color);
+}
+.footer__item{
+    width: 33%;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    padding-right: 5rem;
+    font-weight: 300,700;
+}
+.footer__h2{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding-left: 46.9%;
+}
+.footer__p{
+    padding-left: 46.9%;
+    font-size: 1.4rem;
+    line-height: 1rem;
+    padding-top: 1rem;
+}
+.footer__item2,.footer__item3{
+    width: 33%;
+}
+.twit{
+    color: #78cdf0;
+    font-size: 3.5rem;
+}
+.face{
+    color: #537bbd;
+    font-size: 3.5rem;
+}
+.print{
+    color: #eb5755;
+    font-size: 3.5rem;
+}
+.fab{
+    padding-left: 1.5rem;
+}
+.footer__item2{
+    text-align: center;
+    padding-top: 10.8rem;
+}
+.footer__item3{
+    display: flex;
+    justify-content: center;
+    padding-top: 11rem;
+}
+.footer__img{
+    width: 5.5rem;
+    height: 3.5rem;
+    padding-left: 1rem;
+}
+.footer__text{
+    padding-top: 1rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+}

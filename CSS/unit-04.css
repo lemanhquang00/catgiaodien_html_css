@@ -1,0 +1,123 @@
+:root {
+    --colorText : red;
+    --fontText : 'Arial';
+}
+
+.text-1 {
+    color : var(--colorText);
+    font-family : var(--fontText);
+}
+.text-2 {
+    color : var(--colorText);
+    font-family : var(--fontText);
+}
+.text-3 {
+    color : var(--colorText);
+    font-family: var(--fontText);
+}
+.container {
+    margin-top: 80px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction:  row;
+    justify-content: center;
+    
+}
+
+.col {
+    width:  100px;
+    height: 300px;
+}
+
+.col-1 {
+    background-color: #e6f3ff;
+}
+
+.col-2 {
+    background-color: #cce7ff;
+}
+
+.col-3 {
+    background-color: #b3dbff;
+}
+
+.col-4 {
+    background-color: #99cfff;
+}
+
+.col-5 {
+    background-color: #80c3ff;
+
+}
+
+.col-6 {
+    background-color: #66b8ff ;
+}
+
+.col-7 {
+    background-color: #49a7fa;
+}
+
+.col-8 {
+    background-color: #1d96ff;
+}
+
+.content {
+    width : 600px;
+}
+
+.box {
+    /* float : left; */
+    display: inline-block;
+    width : 120px;
+    height : 300px;
+}
+
+.box-1 { 
+    background-color: #66b8ff;
+}
+
+.box-2 {
+    background-color: #49a7fa;
+
+}
+
+.box-3 {
+    background-color: #1d96ff;
+
+}
+
+.clear { 
+    clear : both;
+}
+.content-box {
+    width : 150px;
+    height : 300px;
+    background-color : red;
+}
+
+.position {
+    width :300px;
+    height: 300px;
+    border : 1px solid red;
+    position: relative;
+    background-color: yellow;
+}
+
+.position img {
+    position : absolute;
+/* bam theo the bao dong ben ngoai
+    relative : di chuyen tu do
+*/
+    top : 0px;
+    /* z-index: -1; */
+}
+
+.nav {
+    width : 100%;
+    height : 80px;
+    background-color : #333;
+    position: fixed;
+    top : 0;
+    left : 0;
+}

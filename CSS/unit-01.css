@@ -1,0 +1,56 @@
+/*id > class > html */
+/* phạm vi tìm kiếm càng nhỏ càng được ưu tiên  */
+/* universal selector */
+@import 'style.css';
+* {
+    /* tac dong vao moi phan tu trong html */
+    /* duoc dung` trong viec reset css trinh duyet */
+    /* đảm bảo khi hiển thị giao diện trên trình duyệt khác nhau thì sẽ đồng bộ/ đồng nhất về giao diện */
+    /* cần reset những thuộc tính nào? */
+    margin: 0;
+    padding: 0;
+}
+
+/* id selector */
+/* #title {
+    color : yellow;
+} */
+/* html selector */
+/* class selector */
+.title {
+    color :blue;
+    
+}
+h1.title {
+    /* thuoc tinh va gia tri */
+    color: red;
+}
+/* attribute selector */
+
+input[type="text"]{
+    border : 2px solid red;
+}
+/* tim` kiem 1 trong nhieu gia tri cua thuoc tinh */
+input[class~="input-pass"]{
+    border : 2px solid blue;
+}
+/* tim` kiem' gan` dung', trong thuoc tinh ton tai gia tri  */
+
+input[class*='pass']{
+    border : 2px solid yellow;
+}
+/* ket thuc boi ki tu nao trong gia tri cua thuoc tinh */
+a[href$='.net']{
+    color : red;
+}
+/* bat dau bang ki tu nao trong gia tri cua thuoc tinh */
+a[href^='http']{
+    color :green;
+}
+a[class|='link']{
+    color :yellow;
+}
+/* selector phan cap - mo phong lai cau truc cua van ban html */
+p.my_title ~ p {
+    color : red;
+}
